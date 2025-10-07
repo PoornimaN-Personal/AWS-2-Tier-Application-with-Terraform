@@ -33,22 +33,34 @@ terraform plan
 
 terraform apply
 
-## 🌐 Application Behavior
-- EC2 instances run a simple web app via Apache (httpd)
-- App connects to RDS using environment variables injected via user_data
-- On visiting the ALB DNS, you’ll see a hostname of the server to which it is connected to and also the link to test the connectivity to the RDS database
-
 ## 🔐 Security Design
 - ALB allows inbound HTTP traffic from the internet
 - EC2 allows traffic only from ALB
 - RDS allows traffic only from EC2
 - Private subnets route outbound traffic via NAT Gatewa
+  
+## 🌐 Application Behavior
+- EC2 instances run a simple web app via Apache (httpd)
+- App connects to RDS using environment variables injected via user_data
+- On visiting the ALB DNS, you’ll see a hostname of the server to which it is connected to and also the link to test the connectivity to the RDS database
 
 ## 📤 Outputs
 After deployment, Terraform will display:
 - ✅ ALB DNS name (access your app here)
 - ✅ EC2 public IPs (for SSH/debugging)
 - ✅ RDS endpoint (used by the app)
+
+## 📌 Screenshots
+
+<img width="831" height="288" alt="image" src="https://github.com/user-attachments/assets/366bb14d-e0b0-4b04-b916-d4342d69b9d2" />
+
+<img width="891" height="411" alt="image" src="https://github.com/user-attachments/assets/47c0ada9-e1f5-4e2b-a594-c44d8f8e2aac" />
+
+<img width="892" height="287" alt="image" src="https://github.com/user-attachments/assets/572206bc-7e36-4764-9abe-ebbcddf8cc23" />
+
+<img width="830" height="343" alt="image" src="https://github.com/user-attachments/assets/7785a726-34a6-4240-86d4-aeae73c00686" />
+
+<img width="877" height="201" alt="image" src="https://github.com/user-attachments/assets/54931ffd-8d0e-4182-8a87-a67555fe271d" />
 
 ## 🧹 Cleanup
 To destroy all resources:
