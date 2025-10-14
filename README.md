@@ -17,7 +17,7 @@ This project provisions a modular, production-style 2-tier architecture on AWS u
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/terraform-aws-2tier-app.git
+git clone https://github.com/PoornimaN-Personal/terraform-aws-2tier-app.git
 
 cd terraform-aws-2tier-app
 
